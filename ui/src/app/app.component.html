@@ -1,3 +1,9 @@
 <app-header></app-header>
 <app-blob-container></app-blob-container>
-<app-thought-container id="thoughts"></app-thought-container>
+<app-thought-container 
+id="thoughts"
+mwlResizable
+[enableGhostResize]="true"
+[resizeEdges]="{bottom: false, right: false, top: true, left: false}"
+(resizeEnd)="onResizeEnd($event)"
+[ngStyle]="style"></app-thought-container>

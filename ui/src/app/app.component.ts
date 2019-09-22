@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ui';
+public style: object = {};
+
+  onResizeEnd(event: ResizeEvent): void {
+    this.style = {
+      position: 'absolute',
+      top: `${event.rectangle.top}px`
+    }
+  }
 }

@@ -3,5 +3,9 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background: blue;
+    border-top: 2px black dotted;
+}
+
+mwlResizable {
+    box-sizing: border-box;
 }
