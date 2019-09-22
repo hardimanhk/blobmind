@@ -1,5 +1,11 @@
 <mat-toolbar role="heading" color="primary">
     <span>blobmind</span>
     <span class="filler"></span>
-    <span>buttons</span>
+    <span>
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+    </span>
 </mat-toolbar>

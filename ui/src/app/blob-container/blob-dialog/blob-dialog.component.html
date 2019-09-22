@@ -1,0 +1,19 @@
+<div *ngIf="firstPage; else secondPage">
+    <h1 mat-dialog-title>New Blob:</h1>
+    <div mat-dialog-content>
+        <p>What do you want to call this blob?</p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="data.name">
+        </mat-form-field>
+    </div>
+    <div mat-dalog-actions>
+        <button mat-button (click)="showNext()">Next</button>
+    </div>
+</div>
+
+<ng-template #secondPage>
+    <h1 mat-dialog-title>{{ data.name }}</h1>
+    <div mat-dialog-content>
+        <p>Would you like to add any existing thoughts to this blob?</p>
+    </div>
+</ng-template>
