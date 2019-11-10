@@ -1,0 +1,12 @@
+<div id="tought-dialog-popup">
+    <h1 mat-dialog-title>New Thought:</h1>
+    <div mat-dialog-content>
+        <p>What are you thinking?</p>
+        <mat-form-field id="thought-area" appearance="outline">
+            <textarea matInput [(ngModel)]="newestThought"></textarea>
+        </mat-form-field>
+    </div>
+    <div mat-dalog-actions>
+        <button mat-button (click)="addThought()" [disabled]="newestThought === ''">Done</button>
+    </div>
+</div>

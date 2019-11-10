@@ -1,1 +1,12 @@
-<p>thought-container works!</p>
+<div *ngFor="let thought of thoughts">
+    <app-thought [singleThought]=thought></app-thought>
+</div>
+
+<button 
+mat-mini-fab 
+matTooltip="Add a thought!"
+color="primary" 
+(click)="openDialog()"
+id="add-thought-button">
+    <mat-icon aria-hidden="false" aria-label="add thought button">add</mat-icon>
+</button>

@@ -4,6 +4,7 @@
     left: 0px;
     right: 0px;
     border-top: 2px black dotted;
+    height: 200px;
 }
 
 mwlResizable {

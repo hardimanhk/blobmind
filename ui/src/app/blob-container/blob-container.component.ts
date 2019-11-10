@@ -8,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./blob-container.component.css']
 })
 export class BlobContainerComponent implements OnInit {
-  name: string;
+  name: string = '';
 
   constructor(public dialog: MatDialog) { }
 

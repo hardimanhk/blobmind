@@ -19,9 +19,13 @@ import { BlobDialogComponent } from './blob-container/blob-dialog/blob-dialog.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 // resizeable 
 import { ResizableModule } from 'angular-resizable-element';
+import { ThoughtDialogComponent } from './thought-container/thought-dialog/thought-dialog.component';
+import { ThoughtService } from './thought-container/thought.service';
+import { ThoughtComponent } from './thought-container/thought/thought.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { ResizableModule } from 'angular-resizable-element';
     ThoughtContainerComponent,
     HeaderComponent,
     BlobComponent,
-    BlobDialogComponent
+    BlobDialogComponent,
+    ThoughtDialogComponent,
+    ThoughtComponent
   ],
   imports: [
     BrowserModule,
@@ -44,13 +50,18 @@ import { ResizableModule } from 'angular-resizable-element';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ResizableModule
+    ResizableModule,
+    MatCardModule
   ],
   entryComponents: [
     BlobDialogComponent,
-    BlobContainerComponent
+    BlobContainerComponent,
+    ThoughtContainerComponent,
+    ThoughtDialogComponent
   ],
-  providers: [],
+  providers: [
+    ThoughtService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
